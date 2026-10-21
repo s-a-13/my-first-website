@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقعي | My Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      color: #172554;
+      text-align: center;
+    }
+    header {
+      background: #164e63;
+      color: white;
+      padding: 24px 16px;
+    }
+    main {
+      max-width: 600px;
+      margin: 35px auto;
+      padding: 24px;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 4px 18px #0001;
+    }
+    button {
+      background: #0e7490;
+      color: white;
+      border: 0;
+      padding: 12px 22px;
+      margin: 6px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    p { line-height: 1.9; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">أهلًا بك في موقعي</h1>
+    <p id="subtitle">هذه أول خطوة في مشروعنا 🚀</p>
+  </header>
+  <main>
+    <h2 id="heading">مرحبًا!</h2>
+    <p id="description">هذا موقعنا الأول، وسنطوره معًا خطوة بخطوة.</p>
+    <button onclick="setLanguage('ar')">العربية</button>
+    <button onclick="setLanguage('en')">English</button>
+  </main>
+  <script>
+    function setLanguage(lang) {
+      const arabic = lang === 'ar';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = arabic ? 'rtl' : 'ltr';
+      document.getElementById('title').textContent =
+        arabic ? 'أهلًا بك في موقعي' : 'Welcome to My Website';
+      document.getElementById('subtitle').textContent =
+        arabic ? 'هذه أول خطوة في مشروعنا 🚀' : 'The first step of our project 🚀';
+      document.getElementById('heading').textContent =
+        arabic ? 'مرحبًا!' : 'Hello!';
+      document.getElementById('description').textContent =
+        arabic ? 'هذا موقعنا الأول، وسنطوره معًا خطوة بخطوة.' :
+        'This is our first website. We will improve it together.';
+    }
+  </script>
+</body>
+</html>
